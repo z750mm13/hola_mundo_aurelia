@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Aurelia</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <link href="./styles.css" type="text/css" rel="stylesheet" />
+    <title>Tecnologias Web</title>
   </head>
   <body aurelia-app="src/main">
     <script src="scripts/system.js"></script>
@@ -13,7 +14,21 @@
     <script src="scripts/aurelia-core.min.js"></script>
     <template>
       <h1>${heading}</h1>
-   </template>
+    </template>
+    <!-- contenedor del Head-->
+    <div class="header">
+      <div>
+          <img src="img/tec.png" width="250" height="250" hspace="5" vspace="5" style="float: left;" >
+          <img src="img/logo_isc.png"  width="250" height="250" hspace="5" vspace="5" style="float: right;" >            
+          <div class="titulos">
+              Instituto Tecnológico Superior de Teposcolula
+              <br>
+              Ingeniería en Sistemas Computacionales
+              <br>
+              Tecnologías Web
+        </div>
+      </div>
+    </div>      
     <script>
       System.import('aurelia-bootstrapper');
     </script>
