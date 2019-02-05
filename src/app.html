@@ -1,0 +1,37 @@
+<template>
+   <!--Contenido del header-->
+   <!--Fin Contenido del header-->
+   <!-- Contenido del cuerpo -->
+   <div class="container">
+      <h1>${heading}</h1>
+      <form submit.trigger="addTodo()">
+         <div class="form-row" style="margin-bottom:10px;">     
+            <div class="col">
+               <input type="text" value.bind="todoDescription" class="form-control au-target" au-target-id="3">
+            </div>
+            <div class="col">
+               <button type="submit" class="btn btn-primary">Agregar Tarea</button>
+            </div>
+         </div>
+      </form>
+      <!-- Lista de tareas Inicio -->
+      <div class="card form-group" style="width: 18rem;">
+         <div class="card-header">
+            Lista de tareas
+         </div>
+         <ul class="list-group list-group-flush">
+            <li repeat.for="todo of todos" class="list-group-item">
+              <input type="checkbox" checked.bind="todo.done">
+              <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">
+                ${todo.description}
+              </span>
+              <button click.trigger="removeTodo(todo)" class="btn btn-danger btn-sm">Eliminar</button>
+            </li>    
+         </ul>
+      </div>
+      <!-- Lista de tareas Fin -->
+   </div>
+   <!-- Fin del contenido del cuerpo -->
+   <!--Contenido del footer-->
+   <!--Fin del contenido del footer-->
+</template>
